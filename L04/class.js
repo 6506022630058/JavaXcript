@@ -1,5 +1,5 @@
 class Song {
-    constructor(n) {
+    constructor() {
         this.title;
         this.author;
 }
@@ -9,3 +9,7 @@ class Song {
 }
 const mySong = new Song();
 mySong.play();
+// mySong.title = "Bohemian Rhapsody";
+// mySong.author = "Queen";
+// console.log(mySong.title);
+// console.log(mySong.author);
