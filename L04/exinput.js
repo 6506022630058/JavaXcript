@@ -5,14 +5,15 @@ const rl = require('readline').createInterface({
 
 var name,weight,height, bmi;
 
-rl.question('What is your name? ', (answer) => {
+rl.question('Enter your name: ', (answer) => {
     name = answer;
-    rl.question('What is your weight? ', (answer) => {
+    rl.question('Enter your weight (in kg): ', (answer) => {
         weight = parseFloat(answer);
-        rl.question('What is your height? ', (answer) => {
+        rl.question('Enter your height (in m): ', (answer) => {
             height = parseFloat(answer);
             bmi = weight / (height * height);
-            console.log(name + ", your BMI is " + bmi);
+            // console.log(name + ", your BMI is " + bmi);
+            console.log(`${name}, your BMI is ${bmi.toFixed(2)}`);
             rl.close();
         });
     }
