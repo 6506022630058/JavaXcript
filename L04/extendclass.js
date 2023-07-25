@@ -15,7 +15,10 @@ class Song extends media {
 const mySong = new Song({
     artist: "Queen",
     name: "Bohemian Rhapsody",
-    publishDate: 1975,
+    publishDate: 1975 
 });
 
 console.log(mySong.name);
+console.log(mySong.artist);
+console.log(mySong.publishDate);
+console.log(mySong);
