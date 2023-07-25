@@ -13,12 +13,12 @@
 
     <script>
         try {
-            lalala;
+            lalala;  // this produces an error (lalala is not defined)
         } catch(err) {
-            alert(err.name);
-            alert(err.message);
-            alert(err.stack);
-            alert(err);
+            alert(err.name);  // ReferenceError
+            alert(err.message);  // lalala is not defined
+            alert(err.stack);  // ReferenceError: lalala is not defined at myFunction (...)
+            alert(err);  // ReferenceError: lalala is not defined
         }
     </script>
 </body>
