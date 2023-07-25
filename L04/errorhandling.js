@@ -5,7 +5,7 @@ function criticalCode() {
 function logError(theException) {
     console.log(theException);
 }
-
+hello();
 console.log("\n********Try..Catch********\n");
 
 try {
