@@ -13,5 +13,7 @@ class Dog {
 }
 
 const myDog = new Dog("Buster");
-myDog.introduce();
-Dog.bark();
+myDog.introduce();  // Call by object (object.method)
+Dog.bark();         // Call by class  (class.method)
+
+// myDog.bark();   // Cannot call by object  (object.method)
