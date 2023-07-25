@@ -18,7 +18,4 @@ const mySong = new Song({
     publishDate: 1975 
 });
 
-console.log(mySong.name);
-console.log(mySong.artist);
-console.log(mySong.publishDate);
 console.log(mySong);
