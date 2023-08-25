@@ -6,7 +6,16 @@ function frequencySort(str){
     for (i in str){
         dic[str[i]] ++;
     }
-    console.log(dic);
+    // console.log(dic);
+    let output = "";
+    for (let [key,value] in dic){
+        while (value !== 0){
+            output = output + key;
+            value = value - 1;
+        }
+        // console.log(key);
+    }
+    console.log(output);
 }
 
 frequencySort("tree") //eert
