@@ -1,13 +1,17 @@
-function jumpingFrog(numofstone,arr){
+function jumpingFrog(numofstone,arr){ /////////////////////////////////////////////
     let jump = 0;
-    let now = 0
+    let placenow = 1;
     let i = 0;
-    while (now < numofstone+2){
+    while (placenow < numofstone+2){
         if (arr[i] !== 0){
             jump = jump + 1;
-            now = now + arr[i];
+            placenow = placenow + arr[i];
+            // console.log(arr[i]);
+            i = i + 1;
+        }else {
+            jump = "no chance :-("
+            break
         }
-        i = i + 1;
     }
     console.log(jump)
 }

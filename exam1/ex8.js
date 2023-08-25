@@ -1,18 +1,21 @@
-function simplePair(arr, ans){
-    let used_i = "";
+function simplePair(arr, ans){ ////////////////////////////////////////////////
+    let used_i = [];
     let output = "";
     for (i in arr){
         for (j in arr){
             if ((arr[i]*arr[j]) == ans & (i !== j)){
-                output = output + `[${arr[i]},${arr[j]}]`
-                used_i = used_i + i 
+                if(used_i.includes(j) == false){
+                    output = output + `[${arr[i]},${arr[j]}]`;
+                    used_i.push(i);
+                }
+                
             }
         }
     }
     if (output !== ""){
-        console.log(output)
+        console.log(output);
     }else {
-        console.log(null)
+        console.log(null);
     }
 }
 

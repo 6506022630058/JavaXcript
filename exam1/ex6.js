@@ -1,8 +1,10 @@
-function removeDups(arr){
+function removeDups(arr){ ///////////////////////////////////////////////////
     let checklist = [];
-    for (i in arr){
-        if (!(arr[i] in checklist)){
+    for(i in arr){
+        // console.log(checklist.includes(arr[i]))
+        if(checklist.includes(arr[i]) === false){
             checklist.push(arr[i]);
+            // console.log(checklist);
         }
     }
     console.log(checklist);

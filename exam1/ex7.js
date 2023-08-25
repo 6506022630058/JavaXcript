@@ -1,16 +1,21 @@
-function sumTwoSmallestNums(arr){
-    let smallest = Infinity
+function sumTwoSmallestNums(arr){ //////////////////////////////////////////////////////
+    let smallest = Infinity;
     for (i in arr){
-        if (arr[i] < smallest){
+        if (arr[i] < smallest & arr[i] > 0){
             smallest = arr[i];
         }
     }
+    // console.log(smallest);
     let small1 = smallest;
-    for (j in arr){
-        if (arr[i] < smallest & arr[i] !== small1){
-            smallest = arr[i];
+    smallest = Infinity;
+    for (i in arr){
+        if (arr[i] < smallest & arr[i] > 0){
+            if (arr[i] !== small1){
+                smallest = arr[i];
+            }
         }
     }
+    // console.log(smallest);
     console.log(small1 + smallest)
 }
 

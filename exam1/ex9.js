@@ -1,4 +1,4 @@
-function digitalClock(sec){
+function digitalClock(sec){ ///////////////////////////////////////////////////
     let hour = 0;
     let min = 0;
     while (sec >= 86400){
@@ -8,9 +8,18 @@ function digitalClock(sec){
         sec = (sec - 3600);
         hour = hour + 1;
     }
+    if (hour < 10){
+        hour = `0${hour}`
+    }
     while (sec >= 60){
        sec = (sec - 60);
        min = min + 1;
+    }
+    if (min < 10){
+        min = `0${min}`
+    }
+    if (sec < 10){
+        sec = `0${sec}`
     }
     console.log(`"${hour}:${min}:${sec}"`);
 }

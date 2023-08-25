@@ -1,13 +1,16 @@
-function longestValidParentheses(wongleb){
+function longestValidParentheses(wongleb){ /////////////////////////////////////
     let count = 0;
-    for (i in wongleb){
-        if (wongleb[i] == "(" & wongleb[i+1] == ")"){
-            if (wongleb[i+1] == ")"){
-                count = count + 1;  
-            }
+    let perd = 0;
+    let pid = 1;
+    // console.log(wongleb.length);
+    while (pid < wongleb.length){
+        if (wongleb[perd] == "(" & wongleb[pid] == ")"){
+            count++;
         }
+        perd++;
+        pid++;
     }
-    console.log(count);
+    console.log(count*2);
 }
 
 longestValidParentheses("(()") //2
