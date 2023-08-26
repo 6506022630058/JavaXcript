@@ -1,4 +1,4 @@
-function totalVolume(...arr) { /////////////////////////////////////////////////////////////////////////////////////////////////
+function totalVolume(...arr) {
     let i = 0
     let plusans = 0
     while (arr[i] !== undefined) {

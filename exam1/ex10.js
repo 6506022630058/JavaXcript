@@ -1,4 +1,4 @@
-function isValidIP(ip){ /////////////////////////////////////////////////////////////////////////////////////////////////
+function isValidIP(ip){
     let arr = ip.split('.');
     if (arr.length !== 4){
         return false

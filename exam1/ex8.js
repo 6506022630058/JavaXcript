@@ -1,4 +1,4 @@
-function simplePair(arr, ans){ ////////////////////////////////////////////////
+function simplePair(arr, ans){
     let used_i = [];
     let output = "";
     for (i in arr){
@@ -8,7 +8,6 @@ function simplePair(arr, ans){ ////////////////////////////////////////////////
                     output = output + `[${arr[i]},${arr[j]}]`;
                     used_i.push(i);
                 }
-                
             }
         }
     }
@@ -18,7 +17,6 @@ function simplePair(arr, ans){ ////////////////////////////////////////////////
         console.log(null);
     }
 }
-
 simplePair([1, 2, 3], 3) // [1,3]
 simplePair([1, 2, 3], 6) // [2,3]
 simplePair([1, 2, 3], 9) // null

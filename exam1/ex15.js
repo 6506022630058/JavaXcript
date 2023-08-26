@@ -15,7 +15,6 @@ function jumpingFrog(numofstone,arr){ //////////////////////////////////////////
     }
     console.log(jump)
 }
-
 //                                    jump1  jump2  jump3  jump4  jump5  jump6 
 jumpingFrog(5,[1,1,1,1,1]) // 6 (start -> st1 -> st2 -> st3 -> st4 -> st5 -> fin)
 //                                    jump1  jump1    jump3              jump4

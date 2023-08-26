@@ -12,7 +12,6 @@ function longestValidParentheses(wongleb){ /////////////////////////////////////
     }
     console.log(count*2);
 }
-
 longestValidParentheses("(()") //2
 longestValidParentheses(")()())") //4
 longestValidParentheses("()))))(()())(") //6

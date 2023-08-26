@@ -17,7 +17,6 @@ function frequencySort(str){
     }
     console.log(output);
 }
-
 frequencySort("tree") //eert
 frequencySort("cccaaa") // aaaccc
 frequencySort("Aabb") // bbAa

@@ -1,4 +1,4 @@
-function numberSplit(num) { /////////////////////////////////////////////////////////////////////////////////////////////////
+function numberSplit(num) {
     let v1 = Math.floor(num/2);
     let v2 = Math.ceil(num/2);
     console.log(`[${v1}, ${v2}]`);

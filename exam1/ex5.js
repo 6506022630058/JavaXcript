@@ -1,4 +1,4 @@
-function getBudgets(arr){ /////////////////////////////////////////////////////////////////////////////////////////////
+function getBudgets(arr){
     let totalbudget = 0;
     for (i in arr){
         let budget = arr[i].budget;
@@ -6,7 +6,6 @@ function getBudgets(arr){ //////////////////////////////////////////////////////
     }
     console.log(totalbudget);
 }
-
 getBudgets([
     { name: "John", age: 21, budget: 23000},
     { name: "Steve", age: 32, budget: 40000},

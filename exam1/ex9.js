@@ -1,4 +1,4 @@
-function digitalClock(sec){ ///////////////////////////////////////////////////
+function digitalClock(sec){
     let hour = 0;
     let min = 0;
     while (sec >= 86400){
