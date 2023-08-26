@@ -6,14 +6,14 @@ function frequencySort(str){
     for (i in str){
         dic[str[i]] ++;
     }
-    // console.log(dic);
     let output = "";
-    for (let [key,value] in dic){
-        while (value !== 0){
-            output = output + key;
-            value = value - 1;
+    for (let key in dic){
+        if (dic[key] !== 0){
+            while (dic[key] !== 0){
+                output = output + key;
+                dic[key] = dic[key] - 1;
+            }
         }
-        // console.log(key);
     }
     console.log(output);
 }
