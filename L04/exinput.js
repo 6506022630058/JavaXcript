@@ -2,9 +2,7 @@ const rl = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout
 });
-
 var name,weight,height, bmi;
-
 rl.question('Enter your name: ', (answer) => {
     name = answer;
     rl.question('Enter your weight (in kg): ', (answer) => {
@@ -19,4 +17,3 @@ rl.question('Enter your name: ', (answer) => {
     }
     );
 });
-

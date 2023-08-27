@@ -4,7 +4,6 @@ class Song {
         this.artist = artist;
     }
 }
-
 const mySong = new Song("Bohemian Rhapsody","Queen");
 console.log(mySong.title);
 console.log(mySong.artist);

@@ -6,5 +6,5 @@ function getVowel(str){
     }
     return m.length;
 }
-console.log(getVowel("seeing"));
-console.log(getVowel("bcd"));
+console.log(getVowel("seeing"));//eei
+console.log(getVowel("bcd"));  //null
