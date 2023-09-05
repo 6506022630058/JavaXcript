@@ -13,7 +13,7 @@ db.run(`CREATE TABLE IF NOT EXISTS Book (
 )`);
 
 app.get('/books', (req, res) => {
-    db.all('SELECT * FROM Book', (err, rows) => {
+    db.all('SELECT * FROM books', (err, rows) => {
         if (err) {
             res.status(500).send(err);
         }else{
@@ -23,5 +23,16 @@ app.get('/books', (req, res) => {
 });
 
 app.get('/books/:id', (req, res) => {
-
+    db.get('SELECT * FROM books WHERE id = ?', req.params.id, (err, row) => {
+        if (err){
+            res.status(500).send(err);
+        }else{
+            res.json(row);
+            if(!row){
+                res.status(404).send('Book not found');
+            }else{
+                res.json(row);
+            }
+        }
+    });
 });
