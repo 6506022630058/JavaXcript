@@ -27,7 +27,16 @@ def maxProductExplanation(n):
         arr.remove(2)
         arr.append(3)
     arr = sorted(arr)
-    return arr
+    output = 1
+    for i in arr:
+        output *= i
+
+    
+    return f"/tExplanation: " + str(input) + " = " + " + ".join(str(x) for x in arr) + ", " + " × ".join(str(x) for x in arr) + " = " + str(output)
+
+# Input: n = 2
+# Output: 1
+# Explanation: 2 = 1 + 1, 1 × 1 = 1
 
 print(maxProductExplanation(2))
 print(maxProductExplanation(5))
@@ -37,16 +46,3 @@ print(maxProductExplanation(15))
 
 
 
-
-
-
-
-
-
-
-    # print(f"Input: n = {input}")
-
-# return `Input: n = ${input}
-# Output: ${arr.reduce((a, b) => a * b, 1)}
-# Explanation: ${input} = ${arr.join(' + ')}, ${arr.join(' × ')} = ${arr.reduce((a, b) => a * b, 1)}`
-# }
