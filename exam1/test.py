@@ -25,7 +25,14 @@ def maxProductExplanation(n):
     if len(arr) > 2 and 1 in arr and 2 in arr:
         arr.splice(arr.indexOf(1), 1)
         arr[arr.indexOf(2)] = 3
+    arr = sorted(arr)
     return arr
+    print(f"")
+
+# return `Input: n = ${input}
+# Output: ${arr.reduce((a, b) => a * b, 1)}
+# Explanation: ${input} = ${arr.join(' + ')}, ${arr.join(' × ')} = ${arr.reduce((a, b) => a * b, 1)}`
+# }
 
 print(maxProductExplanation(2))
 print(maxProductExplanation(5))
