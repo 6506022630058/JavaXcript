@@ -28,15 +28,25 @@ def maxProductExplanation(n):
         arr.append(3)
     arr = sorted(arr)
     return arr
-    # print(f"Input: n = {input}")
-
-# return `Input: n = ${input}
-# Output: ${arr.reduce((a, b) => a * b, 1)}
-# Explanation: ${input} = ${arr.join(' + ')}, ${arr.join(' × ')} = ${arr.reduce((a, b) => a * b, 1)}`
-# }
 
 print(maxProductExplanation(2))
 print(maxProductExplanation(5))
 print(maxProductExplanation(7))
 print(maxProductExplanation(10))
 print(maxProductExplanation(15))
+
+
+
+
+
+
+
+
+
+
+    # print(f"Input: n = {input}")
+
+# return `Input: n = ${input}
+# Output: ${arr.reduce((a, b) => a * b, 1)}
+# Explanation: ${input} = ${arr.join(' + ')}, ${arr.join(' × ')} = ${arr.reduce((a, b) => a * b, 1)}`
+# }
