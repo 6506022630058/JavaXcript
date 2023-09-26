@@ -1,48 +1,21 @@
-def maxProductExplanation(n):
-    input = n
-    arr = []
-    while n > 0:
-        if n > 3:
-            n -= 3
-            arr.append(3)
-        elif n > 2:
-            if n == 3 and arr != []:
-                n -= 3
-                arr.append(3)
-            else:
-                n -= 2
-                arr.append(2)
-        elif n >= 1:
-            if n == 2 and arr != []:
-                n -= 2
-                arr.append(2)
-            else:
-                n -= 1
-                arr.append(1)
-    if arr[0] == 3 and arr[len(arr)-1] == 1:
-        arr[0] = 2
-        arr[len(arr)-1] = 2
-    if len(arr) > 2 and 1 in arr and 2 in arr:
-        arr.remove(1)
-        arr.remove(2)
-        arr.append(3)
-    arr = sorted(arr)
-    output = 1
-    for i in arr:
-        output *= i
-
-    
-    return f"/tExplanation: " + str(input) + " = " + " + ".join(str(x) for x in arr) + ", " + " × ".join(str(x) for x in arr) + " = " + str(output)
-
-# Input: n = 2
-# Output: 1
-# Explanation: 2 = 1 + 1, 1 × 1 = 1
-
-print(maxProductExplanation(2))
-print(maxProductExplanation(5))
-print(maxProductExplanation(7))
-print(maxProductExplanation(10))
-print(maxProductExplanation(15))
+def analyze_sets(A,B,C):
+    w1 = '{'
+    w2 = '}'
+    O1 = ''
+    for b in B:
+        if b % min(A) == 0:
+            O1 = O1  + str(b) + ', '
+    O1 = O1.rstrip(', ')
+    O2 = ''
+    for c in C:
+        if max(A) % c != 0:
+            O2 = O2 + str(c) + ', '
+    O2 = O2.rstrip(', ')
+    O3 = min(A) + min(B) + min(C)
+    return print(f"The given SET are A:{A} B:{B} C:{C} \nThe Result are : {w1}{O1}{w2} {w1}{O2}{w2} {O3}\n")
 
 
-
+analyze_sets({1,2,3},{9,3,6},{1,4,7})
+analyze_sets({2,4},{8,12,15},{1,3})
+analyze_sets({3},{1,2,3},{3,4,5})
+analyze_sets({10,5},{10,20,30},{1,2,4})
